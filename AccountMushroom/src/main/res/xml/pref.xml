@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:key="@string/pref_group_title_filter"
+        android:title="@string/pref_group_title_filter">
+        <MultiSelectListPreference
+            android:key="@string/pref_filter_key_select_account"
+            android:title="@string/pref_filter_title_select_account"
+            android:summary="@string/pref_filter_summary_select_account"/>
+
+        </PreferenceCategory>
+</PreferenceScreen>

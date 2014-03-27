@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">アカウントマッシュルーム</string>
+    <string name="title_activity_mushroom">アカウントマッシュ</string>
+    <string name="title_activity_settings">マッシュルーム設定</string>
+
+    <string name="empty_list_text">アカウントがありません</string>
+
+    <string name="pref_group_title_filter">フィルタ</string>
+    <string name="pref_filter_title_select_account">非表示にするアカウントの選択</string>
+    <string name="pref_filter_title_dialog_select_account">非表示にするアカウント</string>
+    <string name="pref_filter_summary_select_account">選択したアカウントはマッシュルームに表示されなくなります</string>
+
+</resources>

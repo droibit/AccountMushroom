@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Account Mushroom</string>
-    <string name="title_activity_mushroom">Account Mush</string>
+    <string name="title_activity_mushroom">Account Mushroom</string>
     <string name="title_activity_settings">Settings</string>
 
     <string name="empty_list_text">No accounts</string>

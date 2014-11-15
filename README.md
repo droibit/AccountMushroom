@@ -1,4 +1,13 @@
-# License
+## Account Mushroom
+このアプリはGoogle日本語入力、Simeji向けのマッシュルームです。
+
+アカウントマッシュルームを使用すれば、端末で既にログインしている
+アカウント名を選択することができるので、入力の手間がかかりません。
+
+### Download
+[Account Mushroom : GooglePlay](https://play.google.com/store/apps/details?id=com.droibit.accountmushroom)
+
+## License
 
     Copyright 2014 droibit
 

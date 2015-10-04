@@ -14,8 +14,7 @@
         android:theme="@style/DefaultAppTheme" >
         <activity
             android:name=".MushroomActivity"
-            android:label="@string/title_activity_mushroom"
-            android:theme="@style/DefaultAppTheme.NoActionBar">
+            android:label="@string/title_activity_mushroom" >
             <!-- マッシュルーム用のインテントフィルタ -->
             <intent-filter>
                 <action android:name="com.adamrocker.android.simeji.ACTION_INTERCEPT" />

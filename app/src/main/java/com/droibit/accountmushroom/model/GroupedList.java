@@ -1,4 +1,4 @@
-package com.droibit.accountmushroom;
+package com.droibit.accountmushroom.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,7 +9,6 @@ import java.util.Map;
  * {@link android.widget.ExpandableListView}で表示する親グループと子アイテムを格納するクラス
  *
  * @author kumagai
- * @since 2014/03/23.
  */
 public class GroupedList {
 

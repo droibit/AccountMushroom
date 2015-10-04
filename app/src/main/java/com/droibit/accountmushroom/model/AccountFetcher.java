@@ -1,4 +1,4 @@
-package com.droibit.accountmushroom;
+package com.droibit.accountmushroom.model;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -9,7 +9,8 @@ import android.content.res.Resources;
 import android.text.TextUtils;
 import android.util.Log;
 
-import java.util.AbstractMap;
+import com.droibit.accountmushroom.SettingsActivity;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -36,7 +37,7 @@ public final class AccountFetcher {
     private final Map<String, String> mServices;
 
     /** 非表示にするアカウント */
-    private final Set<String> mIgnoreAccounts;
+    private Set<String> mIgnoreAccounts;
 
     /** ログイン情報群 */
     private final Map<String, AuthenticatorDescription> mTypeToAuthDescription;
@@ -57,14 +58,12 @@ public final class AccountFetcher {
     public AccountFetcher(Context context) {
         mContext = context;
 
-        mTypeToAuthDescription = new HashMap<String, AuthenticatorDescription>();
+        mTypeToAuthDescription = new HashMap<>();
         final AuthenticatorDescription[] authDescs = AccountManager.get(context).getAuthenticatorTypes();
         for (int i = 0; i < authDescs.length; i++) {
             mTypeToAuthDescription.put(authDescs[i].type, authDescs[i]);
         }
-        mServices = new HashMap<String, String>(mTypeToAuthDescription.size());
-
-        mIgnoreAccounts = SettingsActivity.getHideAccounts(context);
+        mServices = new HashMap<>(mTypeToAuthDescription.size());
     }
 
     /**
@@ -74,8 +73,9 @@ public final class AccountFetcher {
      * @return グループ化したアカウントのリスト
      */
     public final GroupedList fetch() {
-        final List<Map<String, List<String>>> groups = new ArrayList<Map<String, List<String>>>();
+        mIgnoreAccounts = SettingsActivity.getHideAccounts(mContext);
 
+        final List<Map<String, List<String>>> groups = new ArrayList<>();
         // 扱いやすいように[親:1 - 子:多]のリストに変換する
         for (Account account : AccountManager.get(mContext).getAccounts()) {
             // 非表示アカウントの場合
@@ -141,15 +141,6 @@ public final class AccountFetcher {
             }
         }
         return null;
-    }
-
-    private boolean existsGroup(List<Map<String, String>> groups, String type) {
-        for (Map<String, String> group : groups) {
-            if (group.containsValue(type)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     private String getLabelForType(String accountType) {

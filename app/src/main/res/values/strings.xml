@@ -12,5 +12,9 @@
     <string name="pref_filter_title_select_account">Select the account you want to hide</string>
     <string name="pref_filter_title_dialog_select_account">Account you want to hide</string>
     <string name="pref_filter_summary_select_account">The selected account does not appear in the mushroom</string>
-    <string name="pref_filter_key_select_account">SelectAccount</string>
+    <string name="pref_filter_key_select_account" translatable="false">SelectAccount</string>
+    <string name="msg_deneid_permission_account">You will not be able to select the account</string>
+    <string name="msg_deneid_permission_accout_in_settings">You can not set the filter</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_select_account">Select Account</string>
 </resources>

@@ -10,5 +10,9 @@
     <string name="pref_filter_title_select_account">非表示にするアカウント</string>
     <string name="pref_filter_title_dialog_select_account">非表示にするアカウント</string>
     <string name="pref_filter_summary_select_account">選択したアカウントはマッシュルームに表示されなくなります</string>
+    <string name="msg_deneid_permission_account">アカウントを選択できません</string>
+    <string name="msg_deneid_permission_accout_in_settings">フィルターを設定することができません</string>
+    <string name="action_settings">設定</string>
+    <string name="title_select_account">アカウントの選択</string>
 
 </resources>
